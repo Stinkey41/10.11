@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Города</title>
+    <!-- <script src="17.js"></script> -->
+</head>
+<body>
+    <input id="field">
+    <div id="message"></div>
+
+    <script>
+        let field   = document.querySelector('#field');
+        let message = document.querySelector('#message');
+
+        console.log(message);
+        message.innerHTML = 'vgedgvemk'
+
+        document.querySelector('#field').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                let city = prompt('Введите город');
+                let lastCharOfEnteredCity = city.charAt(city.length - 1);
+                if (Array.from('ыъь').some(e => e === lastCharOfEnteredCity)) lastCharOfEnteredCity = city.charAt(city.length - 2);
+            }
+        }
+        )
+    </script>
+</body>
+</html>
